@@ -1,6 +1,8 @@
 # README #
 
 ## Terraform module to build ECS cluster with EFS storage
+With it's default configuration, this terraform module will create an ECS cluster 
+with 3 nodes that have an EFS share mounted at '/efs'
 
 ### Usage
 Before using this repo, you will have to have terraform installed. Get the latest version [here](https://www.terraform.io/downloads.html). You will also need to have your AWS access keys configured via environment variables. Documentation to set that up can be found [here](http://docs.aws.amazon.com/cli/latest/userguide/cli-environment.html)
