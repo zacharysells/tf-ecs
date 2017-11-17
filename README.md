@@ -21,6 +21,7 @@ Note that there are many other configurable values that you can set for your clu
 See [variables.tf](variables.tf) for all of them.
 
 ```
+terraform init
 terraform plan
 ```
 This will show you a plan of what changes terraform plans on making when you run the next step. Make sure to review this carefully for any unwanted changes. Note that the `key_name` and `env` variables are required. For descriptions of what these variables and others do, see the [variables.tf](variables.tf) file.
