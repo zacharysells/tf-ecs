@@ -6,9 +6,8 @@
 Before using this repo, you will have to have terraform installed. Get the latest version [here](https://www.terraform.io/downloads.html). You will also need to have your AWS access keys configured via environment variables. Documentation to set that up can be found [here](http://docs.aws.amazon.com/cli/latest/userguide/cli-environment.html)
 
 Now that you have all of your dependencies set up, let's get started.
-Source this module like so in a .tf file
-Note that there are many other configurable values that you can set for your cluster.
-See [variables.tf](variables.tf) for all of them.
+
+Source this module like so in a .tf file:
 
 ```
 module ecs {
@@ -17,6 +16,9 @@ module ecs {
     env = "dev"
 }
 ```
+
+Note that there are many other configurable values that you can set for your cluster.
+See [variables.tf](variables.tf) for all of them.
 
 ```
 terraform plan
