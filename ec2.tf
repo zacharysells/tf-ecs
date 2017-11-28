@@ -86,7 +86,7 @@ resource "aws_security_group" "allow_all_from_cluster" {
 }
 
 resource "aws_security_group" "allow_ssh_from_all" {
-  name        = "allow_ssl_from_all"
+  name        = "allow_ssh_from_all"
   description = "Allow ssh traffic"
   vpc_id = "${module.vpc.vpc_id}"
 
