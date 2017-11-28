@@ -55,7 +55,8 @@ resource "aws_instance" "bastion" {
   subnet_id = "${module.vpc.public_subnets[0]}"
   associate_public_ip_address = true
   vpc_security_group_ids = [
-      "${aws_security_group.allow_ssh_from_all.id}"
+      "${aws_security_group.allow_ssh_from_all.id}",
+      "${aws_security_group.allow_http_https_from_cluster"
   ]
 
   tags {
@@ -64,7 +65,7 @@ resource "aws_instance" "bastion" {
   }
 }
 
-resource "aws_security_group" "allow_http_https_from_cluster" {
+resource "aws_security_group" "allow_all_from_cluster" {
   name        = "${var.env}-allow-from-cluster"
   description = "Allow traffic from cluster"
   vpc_id = "${module.vpc.vpc_id}"
