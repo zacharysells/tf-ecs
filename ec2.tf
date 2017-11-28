@@ -29,7 +29,7 @@ resource "aws_launch_configuration" "alc" {
     user_data = "${data.template_file.userdata.rendered}"
     key_name = "${var.key_name}"
     security_groups = [
-      "${aws_security_group.allow_http_https_from_cluster.id}"
+      "${aws_security_group.allow_all_from_cluster.id}"
     ]
     lifecycle {
         create_before_destroy = true
