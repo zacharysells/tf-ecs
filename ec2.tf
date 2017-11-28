@@ -56,7 +56,7 @@ resource "aws_instance" "bastion" {
   associate_public_ip_address = true
   vpc_security_group_ids = [
       "${aws_security_group.allow_ssh_from_all.id}",
-      "${aws_security_group.allow_all_from_cluster}"
+      "${aws_security_group.allow_all_from_cluster.id}"
   ]
 
   tags {
